@@ -1,0 +1,46 @@
+\documentclass[10pt]{beamer}
+\usetheme{CambridgeUS}%{CambridgeUS}%{Boadilla}%{shadow}% theme général du diaporama
+
+
+\setbeamercolor{progress bar progress}{use=progress bar,bg=progress bar.fg}
+\defbeamertemplate{footline}{progress bar}{
+  \dimen0=\paperwidth
+  \multiply\dimen0 by \insertframenumber
+  \divide\dimen0 by \inserttotalframenumber
+  \edef\progressbarwidth{\the\dimen0}
+
+  \leavevmode%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=1.75ex,dp=1ex]{progress bar}
+    \begin{beamercolorbox}[wd=\progressbarwidth,ht=1.75ex,dp=1ex]{progress bar progress}
+    \end{beamercolorbox}%
+  \end{beamercolorbox}%
+}
+
+
+\makeatother
+
+
+
+\begin{document}
+\setbeamertemplate{footline}[progress bar]
+\setbeamercolor{progress bar}{fg=darkred!80!black,bg=gray!30!white}
+
+\setbeamertemplate{caption}{\insertcaption} 
+\addtobeamertemplate{footline}{\insertframenumber/\inserttotalframenumber}
+
+
+\section{Section}
+\subsection{subsection}
+\begin{frame}{Frame 1}
+
+\end{frame}
+
+\begin{frame}{Frame 2}
+
+\end{frame}
+
+\begin{frame}{Frame 3}
+
+\end{frame}
+
+\end{document}
