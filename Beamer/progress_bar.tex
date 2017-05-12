@@ -10,8 +10,11 @@
   \edef\progressbarwidth{\the\dimen0}
 
   \leavevmode%
-  \begin{beamercolorbox}[wd=\paperwidth,ht=1.75ex,dp=1ex]{progress bar}
-    \begin{beamercolorbox}[wd=\progressbarwidth,ht=1.75ex,dp=1ex]{progress bar progress}
+ \begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex]{progress bar}
+    \begin{beamercolorbox}[wd=\progressbarwidth,ht=2.25ex,dp=1ex]{progress bar progress}
+    	\begin{tabular*}{\textwidth}{c  @{\extracolsep{\fill}} c c}
+    		\textcolor{black}{\insertshortauthor{}\hspace*{2em} \insertshortinstitute} & \textcolor{black}{\insertshorttitle} & \textcolor{black}{\insertshortdate{}\hspace*{2em} \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} }
+    	\end{tabular*}
     \end{beamercolorbox}%
   \end{beamercolorbox}%
 }
@@ -26,8 +29,14 @@
 \setbeamercolor{progress bar}{fg=darkred!80!black,bg=gray!30!white}
 
 \setbeamertemplate{caption}{\insertcaption} 
-\addtobeamertemplate{footline}{\insertframenumber/\inserttotalframenumber}
 
+\title[Title]{Long Title}
+
+
+\author[Name]{Long Name}
+\institute{Institute}
+
+\maketitle
 
 \section{Section}
 \subsection{subsection}
